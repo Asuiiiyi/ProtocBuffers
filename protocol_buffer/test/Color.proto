@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+//添加包 ColorPackage 
+package ColorPackage;
+
+enum Color
+{
+    Red = 0;
+    Green = 3;		
+    Yellow = 6;
+    Blue = 9;
+}

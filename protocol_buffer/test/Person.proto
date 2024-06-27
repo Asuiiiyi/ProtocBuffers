@@ -1,0 +1,18 @@
+syntax = "proto3";
+import "Color.proto";
+
+//添加包 PersonPackage 
+package PersonPackage;
+
+message Person
+{
+    int32 id = 1;
+    bytes name = 2;
+    bytes sex = 3;	
+    repeated bytes address = 4;
+    int32 age = 5;
+    // 添加信息, 使用的是外部proto文件中定义的数据类型
+    // 如果这个外边类型属于某个包, 语法格式:
+    // 包的名字.类名 变量名=编号;
+    ColorPackage.Color color = 6;
+}
